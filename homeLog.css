@@ -1,3 +1,7 @@
+html, body {
+    height: 100%;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -7,7 +11,7 @@
 header{
     background-color: #000;
     position: relative;
-    height: 60px;
+    height: 61px;
 }
 
 header div{
@@ -41,8 +45,10 @@ header div{
 }
 
 .imgSlid{
-    height: 500px;
+    height: 100%;
+    margin-top: -4%;
     background-image:url("https://thuthuatnhanh.com/wp-content/uploads/2021/11/hinh-anh-chill-phong-canh-buon-hoang-hon.jpg");
     background-size:cover;
     background-repeat: no-repeat;
+    display: block;
 }

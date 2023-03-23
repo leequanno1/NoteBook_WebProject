@@ -5,7 +5,7 @@ CKEDITOR.replace('editor', {
     {name: 'clipboard', items: ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo']},
     {name: 'editing', items: ['Find', 'Replace', '-', 'SelectAll']},
     '/',
-    {name: 'basicstyles', items: ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat']},
+    {name: 'basicstyles', items: ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', 'ExportPdf', '-', 'RemoveFormat']},
     {name: 'paragraph', items: ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote','-','JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock']},
     {name: 'links', items: ['Link', 'Unlink']},
     {name: 'insert', items: ['Image', 'Table', 'HorizontalRule', 'SpecialChar']},
@@ -17,7 +17,10 @@ CKEDITOR.replace('editor', {
   height: '81vh' // Chiều cao của CKEditor
 });
 
+// script xử lý lưu và nạp.
 if (CKEDITOR.instances.editor.getData()){
   console.log(CKEDITOR.instances.editor.getData());
   CKEDITOR.instances.editor.setData(CKEDITOR.instances.editor.getData() + '<p>This is the editor data.</p>' );
 }
+
+console.log(CKEDITOR.instances.editor.getData());
