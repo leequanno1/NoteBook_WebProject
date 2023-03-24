@@ -46,15 +46,23 @@ body {
     font-weight: 300
 }
 
-#login-form .action button {
+#login-form .action a {
     width: 100%;
     border: none;
     padding: 18px;
     font-family: rubik, sans-serif;
-    cursor: pointer;
     text-transform: uppercase;
     outline: 0;
     transition: all .3s;
+    text-decoration: none;
+    background-color: #f1f2f6;
+    color: #000;
+    display: block;
+}
+
+.action a:hover {
+    cursor: pointer;
+    opacity: 0.6;
 }
 
 .content {
