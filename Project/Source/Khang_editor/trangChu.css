@@ -29,6 +29,7 @@
 }
 
 .creNote_exit{
+    display: none;
     border: none;
     position: absolute;
     bottom: 15px;
@@ -63,9 +64,15 @@ header{
     background: lightblue;
     border-radius: 50%;
     margin-left: 20px;
+    margin-top:10px;
 }
 
 .icon{
     font-size: 33px;
     padding: 8px 17px;
+}
+
+.icon:hover{
+    cursor: pointer;
+    opacity: 0.6;
 }

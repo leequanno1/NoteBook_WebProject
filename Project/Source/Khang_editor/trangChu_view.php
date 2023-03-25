@@ -23,5 +23,6 @@
             <div class="creNote_exit">Exit</div>
         </form> 
     </div>
+    <script src="./trangChu.js"></script>
 </body>
 </html>
