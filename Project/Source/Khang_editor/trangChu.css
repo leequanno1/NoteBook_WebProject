@@ -43,8 +43,6 @@
     opacity: 0.6;
 }
 
-
-
 .nameInput{
     width: 132px;
     margin: 15px 20px;
@@ -53,4 +51,21 @@
 .nameText{
     text-align: center;
     margin: 10px 0;
+}
+
+header{
+    background-color: #000;
+    height: 60px;
+}
+
+.creNote_button{
+    display: inline-block;
+    background: lightblue;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.icon{
+    font-size: 33px;
+    padding: 8px 17px;
 }
