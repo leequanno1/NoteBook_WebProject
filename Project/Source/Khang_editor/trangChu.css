@@ -4,63 +4,53 @@
     box-sizing: border-box;
 }
 
-header{
-    background-color: #000;
-    height: 61px;
+.creNote_view{
+    border: solid;
+    width: 180px;
+    height: 210px;
+    margin: auto;
+    position: relative;
+    top: 100px;
 }
 
-.creNote_but{
-    display: inline-block;
-    background-color: lightblue;
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-    margin: 20px;
+.create{
+    border: none;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    padding: 10px 20px;
+    border-radius: 7px;
+    background-color: blue;
 }
 
-.creNote_but .icon{
-    font-size: 35px;
-    text-align: center;
-    padding: 5px 0;
+.create:hover{
+    cursor: pointer;
+    opacity: 0.6;
 }
 
-.creNote_but .icon:hover{
+.creNote_exit{
+    border: none;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    padding: 10px 20px;
+    border-radius: 7px;
+    background-color: blue;
+}
+
+.creNote_exit:hover{
     cursor: pointer;
     opacity: 0.6;
 }
 
 
 
-.creNote_view{
-    display: none;
-    position: relative;
-    height: 210px;
-    width: 180px;
-    margin: auto;
-    border: solid #000 1px;
+.nameInput{
+    width: 132px;
+    margin: 15px 20px;
 }
 
-.creNote_view .nameText{
+.nameText{
     text-align: center;
-    margin: 17px 0;
-}
-
-.creNote_view a{
-    display: inline-block;
-    text-decoration: none;
-    width: 60px;
-    margin:0 13.5px;
-    text-align: center;
-    margin-top: 70px;
-    height: 30px;
-    background-color: lightblue;
-    border-radius: 7px;
-    padding: 7px 0;
-}
-
-.creNote_view input{
-    width: 130px;
-    margin: 15px auto;
-    display: block;
-    padding: 0px;
+    margin: 10px 0;
 }
