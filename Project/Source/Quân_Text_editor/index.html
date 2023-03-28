@@ -5,15 +5,19 @@
   <title>Text Editor</title>
   
   <!-- Nhúng thư viện CKEditor -->
-  <script src="https://cdn.ckeditor.com/4.16.0/full/ckeditor.js"></script>
+  <!-- <script src="https://cdn.ckeditor.com/4.16.0/full/ckeditor.js"></script> -->
+  <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/super-build/ckeditor.js"></script>
   
   <!-- Liên kết file CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="editor">
-    <p>This is the editor content.</p>
-  </div>
+  <form id="container">
+    <div id="editor" class="editor">
+      <p>This is the editor content.</p>
+    </div>
+    <button onclick="alert(myEditor.getData())">Get text data</button>
+  </form>
   
 <script src="script.js"></script>
 </body>
