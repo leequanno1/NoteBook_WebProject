@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    /*-webkit-font-smoothing: antialiased*/
 }
 
 body {
@@ -19,9 +19,16 @@ body {
     background: white;
     width: 500px;
     margin: 65px auto;
+    /*display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    border-radius: 4px;
+    box-shadow: 0 2px 25px rgba(0,0,0,.2) */
 }
 
-#login-form a.link {
+#login-form .action {
     text-decoration: none;
     color: grey;
     margin-top: 20px;
@@ -39,7 +46,21 @@ body {
     font-weight: 300
 }
 
-#login-form .action a {
+.btn_reg{
+    width: 100%;
+    border: none;
+    padding: 18px;
+    font-family: rubik, sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    transition: all .3s;
+    background-color:#f1f2f6 ;
+    display: block;
+    text-decoration: none;
+    color: #485460;
+}
+
+/* #login-form .action a {
     width: 100%;
     border: none;
     padding: 18px;
@@ -51,7 +72,7 @@ body {
     background-color: #f1f2f6;
     color: #000;
     display: block;
-}
+} */
 
 .action a:hover {
     cursor: pointer;
@@ -76,6 +97,8 @@ body {
     border: 0;
     border-bottom: 1px solid #747474;
     outline: none;
+    /*-webkit-transition: all .2s;
+    transition: all .2s */
 }
 
 .title1{

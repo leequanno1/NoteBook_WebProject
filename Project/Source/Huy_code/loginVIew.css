@@ -2,10 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /*-webkit-font-smoothing: antialiased*/
 }
 
 body {
+    /* background-image: url("https://scontent.fsgn5-8.fna.fbcdn.net/v/t1.15752-9/336119204_598785545601423_7836079147720437859_n.png?_nc_cat=109&ccb=1-7&_nc_sid=ae9488&_nc_ohc=-AJ5OWeBvEAAX8pR599&_nc_ht=scontent.fsgn5-8.fna&oh=03_AdQqmz2_K_pnerFEht58X5NPV1zpeHSamVdAnEJ9VaEqUg&oe=644524F0"); */
     background-color:powderblue;
+    background-size: cover;
+    background-repeat: no-repeat;
     font-family: rubik, sans-serif;
     position: absolute;
     top: 50%;
@@ -15,9 +19,17 @@ body {
 
 #login-form {
     border-radius: 40px;
-    background: white;
+    /* background: rgba(255, 255, 255, 0); */
+    background-color: white;
     width: 500px;
     margin: 65px auto;
+    /*display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    border-radius: 4px;
+    box-shadow: 0 2px 25px rgba(0,0,0,.2) */
 }
 
 #login-form a.link {
@@ -40,7 +52,21 @@ body {
 #login-form .action a {
     width: 100%;
     border: none;
-    padding: 18px;
+    padding: 16px;
+    font-family: rubik, sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    transition: all .3s;
+    background-color:#f1f2f6 ;
+    display: block;
+    text-decoration: none;
+    color: #485460;
+}
+
+.btn_log{
+    width: 100%;
+    border: none;
+    padding: 16px;
     font-family: rubik, sans-serif;
     text-transform: uppercase;
     outline: 0;
@@ -74,6 +100,8 @@ body {
     border: 0;
     border-bottom: 1px solid #747474;
     outline: none;
+    /*-webkit-transition: all .2s;
+    transition: all .2s */
 }
 
 .title1{
