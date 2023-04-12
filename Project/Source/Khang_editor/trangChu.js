@@ -1,6 +1,6 @@
 var creNote_but = document.getElementsByClassName("icon");
 var creNote_view = document.getElementsByClassName("creNote_view");
-var exit = document.getElementsByClassName("exit");
+var exit = document.getElementsByClassName("creNote_exit");
 
 creNote_but[0].addEventListener("click",open_creNote_view);
 exit[0].addEventListener("click",exit_creNote);

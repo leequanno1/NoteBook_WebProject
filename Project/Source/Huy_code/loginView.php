@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="loginView.css">
     <title>Login</title>
 </head>
+
 <body aria-hidden="false" style="padding: 0px;">
     <div id="login-form">
-        <form action="logData.php" method="POST">
+        <form action="./logData.php" method="POST">
             <h1 class="title1">Đăng nhập </h1> 
             <h3 class="title2">Notebook </h3> <br>
             <div class="content">
