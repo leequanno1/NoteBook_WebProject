@@ -23,7 +23,10 @@
                 </div>
                 <div class="input-field">
                     <input type="password" name="repassword" title="Phải có ít nhất 6 ký tự và tối thiểu 1 chữ thường" placeholder="Nhập Lại Mật Khẩu" id="pass2"> <br>
-                </div>     
+                </div>    
+                <div class="input-field">
+                    <input type="text" name="phone" placeholder="Số điện thoại" id="phone"> <br>
+                </div> 
                 <input type="submit" class="btn_reg" name="btn_reg" value="Đăng ký">
             </div>
         </form>
