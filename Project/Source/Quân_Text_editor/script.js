@@ -13,10 +13,9 @@ CKEDITOR.ClassicEditor.create(document.getElementById("editor"), {
             '-',
             'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', 'highlight', '|',
             'alignment', '|',
-            'link', 'insertImage', 'blockQuote', 'insertTable', 'mediaEmbed', 'codeBlock', 'htmlEmbed', '|',
+            'link', 'insertImage', 'blockQuote', 'insertTable', 'mediaEmbed', '|',
             'specialCharacters', 'horizontalLine', 'pageBreak', '|',
-            'textPartLanguage', '|',
-            'sourceEditing'
+            'textPartLanguage', '|'
         ],
         shouldNotGroupWhenFull: true
     },
@@ -136,22 +135,19 @@ CKEDITOR.ClassicEditor.create(document.getElementById("editor"), {
         'WProofreader',
         // Careful, with the Mathtype plugin CKEditor will not load when loading this sample
         // from a local file system (file://) - load this site via HTTP server if you enable MathType
-        'MathType'
+        'MathType',
+        'sourceEditing',
+        'codeBlock',
+        'htmlEmbed'
     ],
     // updateSourceElementOnDestroy: false
 })
 .then(editor => {myEditor = editor;
-    const content = myEditor.getData() + 'Đây là nội dung mẫu.';
-    myEditor.setData( content );})
+    // const content = "<?php echo $_SESSION['text_content'] ?>";
+    // myEditor.setData( content );
+})
 .catch(error => {console.error(error);});
 
-// if (CKEDITOR.instances.editor.getData()){
-//   console.log(CKEDITOR.instances.editor.getData());
-//   // CKEDITOR.instances.editor.setData(CKEDITOR.instances.editor.getData() + '<p>This is the editor data.</p>' );
-// }
 
 
 
-function setData(data){
-    myEditor.setData("My data");
-}
