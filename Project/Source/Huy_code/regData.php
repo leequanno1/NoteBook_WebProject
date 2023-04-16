@@ -14,6 +14,7 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
         $repassword = $_POST['repassword'];
+        $phone = $_POST['phone'];
         if($password != $repassword) {
             header("location: registerView.php");
         }
@@ -23,10 +24,11 @@
         if(mysqli_num_rows($old) > 0) {
             header("location: registerView.php");
         }
-        $sql ="INSERT INTO sql_account (username, password) VALUE ('$username', '$password')";
+        $sql ="INSERT INTO sql_account (username, password, phone) VALUE ('$username', '$password', '$phone')";
         echo($username); echo "<br>";
         echo($password); echo "<br>";
         echo($repassword); echo "<br>";
+        echo($phone); echo "<br>";
 
         mysqli_query($conn, $sql);
         echo "Đã đăng ký thành công";
