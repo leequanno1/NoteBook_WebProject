@@ -143,8 +143,6 @@ CKEDITOR.ClassicEditor.create(document.getElementById("editor"), {
     // updateSourceElementOnDestroy: false
 })
 .then(editor => {myEditor = editor;
-    // const content = "<?php echo $_SESSION['text_content'] ?>";
-    // myEditor.setData( content );
 })
 .catch(error => {console.error(error);});
 
