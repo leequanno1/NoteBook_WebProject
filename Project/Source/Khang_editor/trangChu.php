@@ -1,19 +1,13 @@
 <?php
-    $severname = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "notes";
-    $conn = new mysqli($severname,$username,$password,$database);
-    
-    
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $nameInput = $_POST['nameInput']; 
-        if(isset($nameInput)){
-            $themNote = "INSERT INTO note (maNote,tenNote) VALUES ('001','$nameInput')";
-            mysqli_query($conn,$themNote);
-        }
-        else{
-            echo 'Have';
-        }
+    include "../connetdata.php";
+    session_start();
+    if ($_POST['tenNote']) {
+        $tenNote = $_POST['tenNote'];
+        $username = $_SESSION['username'];
+        echo "$tenNote";
+        echo "$username";
+        $themNote = "INSERT INTO notes (tendn,tennote) VALUES ('$username','$tenNote')";
+        mysqli_query($conn,$themNote);
+        header("location: ../Quan_Text_editor/index.html");
     }
 ?>
