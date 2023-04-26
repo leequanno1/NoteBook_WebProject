@@ -18,7 +18,20 @@
             <input type="text" class = "nameInput" name="tenNote">
             <button type="sumbit" name="create" class="create"> Tạo </button>
             <div class="creNote_exit">Exit</div>
-        </form> 
+        </form>
+        <div class="noteList">
+            <?php
+                include '../connetdata.php';
+                session_start();
+                $username = $_SESSION['username'];
+                $sql = "SELECT tenNote FROM notes WHERE tendn = '$username'";
+                $res = mysqli_query($conn,$sql);
+                while($row = mysqli_fetch_assoc($res)){
+                    $value = $row['tenNote'];
+                    echo "<li class='note_name'>$value</li>";
+                }
+            ?>
+        </div>
     </div>
     <script src="./trangChu.js"></script>
 </body>

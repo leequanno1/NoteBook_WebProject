@@ -10,8 +10,9 @@
     width: 180px;
     height: 210px;
     margin: auto;
-    position: relative;
-    top: 100px;
+    position: absolute;
+    top: 210px;
+    right: 380px;
 }
 
 .create{
@@ -76,4 +77,13 @@ header{
 .icon:hover{
     cursor: pointer;
     opacity: 0.6;
+}
+
+.noteList{
+    margin: 0 150px;
+    list-style-type: none;
+}
+
+.note_name{
+    font-size: 22px;
 }
