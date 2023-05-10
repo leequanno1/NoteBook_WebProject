@@ -15,5 +15,7 @@
             mysqli_query($conn, $dangky);
             header("location: ./loginView.php");
         }
+    }else{
+        header("location: registerView.php");
     }
 ?>

@@ -1,6 +1,6 @@
 <?php
     include "../connetdata.php";
-    $get_content = mysqli_query($conn,"SELECT noidung FROM notes WHERE manote = '01'");
+    $get_content = mysqli_query($conn,"SELECT tennote ,noidung FROM notes WHERE tennote = 'note 1'");
     $row = mysqli_fetch_assoc($get_content);
 ?>
 
@@ -18,12 +18,17 @@
 </head>
 <body>
   <form id="container">
+    <input type="text" name="" id="note_title" value="
+    <?php 
+        echo $row['tennote'];
+      ?>">
+    <button id="submitBtn">Lưu</button>
+
     <textarea id="editor" class="editor">
       <?php 
         echo $row['noidung'];
       ?>
     </textarea>
-    <button id="submitBtn">Lưu</button>
   </form>
   <script src="script.js"></script>
   <script src="eventLTN.js"></script>

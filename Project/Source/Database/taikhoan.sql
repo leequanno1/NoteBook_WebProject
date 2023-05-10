@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th4 16, 2023 lúc 11:24 AM
+-- Thời gian đã tạo: Th5 10, 2023 lúc 02:33 AM
 -- Phiên bản máy phục vụ: 10.4.27-MariaDB
 -- Phiên bản PHP: 8.2.0
 
@@ -37,7 +37,8 @@ CREATE TABLE `taikhoan` (
 --
 
 INSERT INTO `taikhoan` (`tendn`, `matkhau`) VALUES
-('khang', 'khanghoai');
+('user1', '1234'),
+('user2', '1234');
 
 --
 -- Chỉ mục cho các bảng đã đổ

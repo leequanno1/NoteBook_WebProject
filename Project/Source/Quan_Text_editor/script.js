@@ -15,7 +15,8 @@ CKEDITOR.ClassicEditor.create(document.getElementById("editor"), {
             'alignment', '|',
             'link', 'insertImage', 'blockQuote', 'insertTable', 'mediaEmbed', '|',
             'specialCharacters', 'horizontalLine', 'pageBreak', '|',
-            'textPartLanguage', '|'
+            'textPartLanguage', '|' ,
+            'sourceEditing'
         ],
         shouldNotGroupWhenFull: true
     },
@@ -136,7 +137,6 @@ CKEDITOR.ClassicEditor.create(document.getElementById("editor"), {
         // Careful, with the Mathtype plugin CKEditor will not load when loading this sample
         // from a local file system (file://) - load this site via HTTP server if you enable MathType
         'MathType',
-        'sourceEditing',
         'codeBlock',
         'htmlEmbed'
     ],

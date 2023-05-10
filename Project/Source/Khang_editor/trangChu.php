@@ -8,6 +8,6 @@
         echo "$username";
         $themNote = "INSERT INTO notes (tendn,tennote) VALUES ('$username','$tenNote')";
         mysqli_query($conn,$themNote);
-        header("location: ../Quan_Text_editor/index.html");
+        header("location: ../Quan_Text_editor/index.php");
     }
 ?>
