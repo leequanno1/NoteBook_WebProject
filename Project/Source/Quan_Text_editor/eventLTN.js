@@ -15,5 +15,4 @@ document.querySelector('#submitBtn').addEventListener('click', function() {
         }
     };
     xhr.send(JSON.stringify(content));
-    alert(content)
 });
