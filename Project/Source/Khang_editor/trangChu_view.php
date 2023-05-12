@@ -23,8 +23,8 @@
             <?php
                 include '../connetdata.php';
                 session_start();
-                $username = $_SESSION['username'];
-                $sql = "SELECT tenNote FROM notes WHERE tendn = '$username'";
+                $tendn = $_SESSION['tendn'];
+                $sql = "SELECT tenNote FROM notes WHERE tendn = '$tendn'";
                 $res = mysqli_query($conn,$sql);
                 while($row = mysqli_fetch_assoc($res)){
                     $value = $row['tenNote'];

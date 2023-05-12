@@ -1,7 +1,7 @@
 <?php
     include '../connetdata.php';
     session_start();
-    $_SESSION['username'] = $_POST['username'];
+    $_SESSION['tendn'] = $_POST['username'];
     if(isset($_POST["btn_log"]) && $_POST["username"] != '' && $_POST["password"] != '') {
         $username = $_POST['username'];
         $password = $_POST['password'];

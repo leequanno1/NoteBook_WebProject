@@ -1,10 +1,10 @@
 <?php
     session_start();
     include "../connetdata.php";
-    $tennote = $_GET['tennote'];
+    $tennote = $_SESSION['tennote'];
     $tendn = $_SESSION['tendn'];
-    $noidung =$tendn+"_"+$tennote+".txt";
-    $file = "../NoteFile/"+$noidung;
+    $noidung =$tendn."_".$tennote.".txt";
+    $file = "../NoteFiles/".$noidung;
 ?>
 
 <!DOCTYPE html>
