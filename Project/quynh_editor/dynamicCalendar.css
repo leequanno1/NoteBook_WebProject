@@ -1,0 +1,75 @@
+html{
+    background-color: violet;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    background-color: white;
+    border-radius: 10px;
+    width: 400px;
+    height: auto;
+    padding : 10px
+    /* min-height:100vh */
+}
+.container .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding :5px 30px 10px
+}
+.header .monthAndYear{
+    font-size: 1.45rem;
+    font-weight: 800;
+}
+.header .icons span{
+    width: 70px;
+    height: 70px;
+    font-size: xx-large;
+    background-color:  #f2f2f2;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 5px;
+    text-align: center;
+    margin: 0px 2px;
+    font-weight: bold;
+    border-style: outset;
+}
+.icons span:hover{
+    background-color: #e8e8e8;
+}
+.calendar ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-left: -35px
+}
+.calendar ul li{
+    width: calc(100%/7);
+}
+.calendar .weekDays{
+    font-weight: 600;
+}
+.calendar .dateOfMonth{
+    margin-top:-10px;
+    line-height: 30px;
+    font-weight: 500;
+}
+.calendar .weekDays:hover{
+    cursor: context-menu;
+}
+.calendar .dateOfMonth li:hover{
+    cursor: pointer;
+    background-color: #e8e8e8;
+    border-radius: 50%;
+}
+.inactive{
+    color: rgba(217, 50, 50,0.6)
+}
+.today{
+    background-color: rgb(241, 21, 241);
+    border-radius: 50%;
+}
