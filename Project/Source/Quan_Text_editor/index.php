@@ -20,15 +20,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="headerFinderDiv">
-  </div>
   <div id="editorDiv">
     <form id="container">
-      <input type="text" name="" id="tennote" value="
-      <?php 
-          echo $tennote;
-      ?>">
-      <button id="submitBtn">Lưu</button>
+      <div id="name_and_button">
+        <input type="text" name="" id="tennote" value="
+        <?php 
+            echo $tennote;
+        ?>">
+        <button id="submitBtn">Lưu tại đây</button>
+      </div>
       <textarea id="editor" class="editor">
         <?php 
           echo file_get_contents($file);
