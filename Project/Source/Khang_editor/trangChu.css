@@ -87,3 +87,7 @@ header{
 .note_name{
     font-size: 22px;
 }
+
+.note_name:hover{
+    cursor: pointer;
+}
