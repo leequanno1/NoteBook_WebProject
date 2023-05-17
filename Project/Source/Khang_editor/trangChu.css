@@ -86,6 +86,9 @@ header{
 
 .note_name{
     font-size: 22px;
+    text-decoration: none;
+    color:#000;
+    display: block;
 }
 
 .note_name:hover{

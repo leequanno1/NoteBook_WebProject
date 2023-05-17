@@ -28,7 +28,7 @@
                 $res = mysqli_query($conn,$sql);
                 while($row = mysqli_fetch_assoc($res)){
                     $value = $row['tenNote'];
-                    echo "<li class='note_name'>$value</li>";
+                    echo "<a href= './trangChu.php?tennote=".$value."' class='note_name'>$value</a>";
                 }
             ?>
         </div>
