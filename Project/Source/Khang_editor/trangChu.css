@@ -3,6 +3,27 @@
     margin: 0;
     box-sizing: border-box;
 }
+/* Header */
+.btnHeader{
+    color:#fff;
+    display:inline-block;
+    padding:21px;
+    margin-left: 35px;
+}
+
+.btnHeader:hover{
+    background-color: gray;
+    cursor: pointer;
+}
+/* Header */
+
+#lich_content{
+    display: none;
+}
+
+#tkb_content{
+    display: none;
+}
 
 .creNote_view{
     display:none;
@@ -86,6 +107,9 @@ header{
 
 .note_name{
     font-size: 22px;
+    text-decoration: none;
+    color:#000;
+    display: block;
 }
 
 .note_name:hover{

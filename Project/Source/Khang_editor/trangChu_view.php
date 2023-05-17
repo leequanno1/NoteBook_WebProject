@@ -8,29 +8,41 @@
     <title>Trang Chu</title>
 </head>
 <body>
-    <header></header>
+    <header>
+        <div class="btnHeader">NOTE</div>
+        <div class="btnHeader">LỊCH</div>
+        <div class="btnHeader">TKB</div>
+    </header>
     <div class="main">
-        <div class="creNote_but">
-            <p class="icon">+</p>
+        <div id="note_content">
+            <div class="creNote_but">
+                <p class="icon">+</p>
+            </div>
+            <form action="./trangChu.php" class="creNote_view" method="post">
+                <h2 class="nameText">Tên note</h2>
+                <input type="text" class = "nameInput" name="tenNote">
+                <button type="sumbit" name="create" class="create"> Tạo </button>
+                <div class="creNote_exit">Exit</div>
+            </form>
+            <div class="noteList">
+                <?php
+                    include '../connetdata.php';
+                    session_start();
+                    $tendn = $_SESSION['tendn'];
+                    $sql = "SELECT tenNote FROM notes WHERE tendn = '$tendn'";
+                    $res = mysqli_query($conn,$sql);
+                    while($row = mysqli_fetch_assoc($res)){
+                        $value = $row['tenNote'];
+                        echo "<a href= './trangChu.php?tennote=".$value."' class='note_name'>$value</a>";
+                    }
+                ?>
+            </div>
         </div>
-        <form action="./trangChu.php" class="creNote_view" method="post">
-            <h2 class="nameText">Tên note</h2>
-            <input type="text" class = "nameInput" name="tenNote">
-            <button type="sumbit" name="create" class="create"> Tạo </button>
-            <div class="creNote_exit">Exit</div>
-        </form>
-        <div class="noteList">
-            <?php
-                include '../connetdata.php';
-                session_start();
-                $tendn = $_SESSION['tendn'];
-                $sql = "SELECT tenNote FROM notes WHERE tendn = '$tendn'";
-                $res = mysqli_query($conn,$sql);
-                while($row = mysqli_fetch_assoc($res)){
-                    $value = $row['tenNote'];
-                    echo "<li class='note_name'>$value</li>";
-                }
-            ?>
+        <div id="lich_content">
+            <p>Đây là nơi chứa code lịch</p>
+        </div>
+        <div id="tkb_content">
+            <p>Đây là nơi chứa thời khóa biểu</p>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>

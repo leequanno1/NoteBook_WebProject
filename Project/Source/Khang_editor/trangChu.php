@@ -18,11 +18,10 @@
         $note = fopen($file, "w");
         fwrite($note,$default);
         fclose($note);
-        echo $_SESSION['tennote'];
-        echo "duoc";
         header("location: ../Quan_Text_editor/index.php");
     }
     else{
-        echo "Loi";
+        $_SESSION['tennote'] = $_GET['tennote'];
+        header("location: ../Quan_Text_editor/index.php");
     }
 ?>
