@@ -16,16 +16,16 @@
             <h3 class="title2">Notebook </h3> <br>
             <div class="content">
                 <div class="input-field">
-                    <input type="text" name="username" placeholder="Tài Khoản" id="username"> <br>
+                    <input type="text" name="username" placeholder="Tài Khoản" id="username" pattern="^[a-zA-Z0-9_-]{8,20}$">  <br>
                 </div>
                 <div class="input-field">
-                    <input type="password" name="password" title="Phải có ít nhất 6 ký tự và tối thiểu 1 chữ thường" placeholder="Mật Khẩu" id="pass1"> <br>
+                    <input type="password" name="password" placeholder="Mật Khẩu" id="pass1" minlength="8" maxlength="20"  required > <br>
                 </div>
                 <div class="input-field">
-                    <input type="password" name="repassword" title="Phải có ít nhất 6 ký tự và tối thiểu 1 chữ thường" placeholder="Nhập Lại Mật Khẩu" id="pass2"> <br>
+                    <input type="password" name="repassword" placeholder="Nhập Lại Mật Khẩu" id="pass2"> <br>
                 </div>    
                 <div class="input-field">
-                    <input type="text" name="phone" placeholder="Số điện thoại" id="phone"> <br>
+                    <input type="email" name="email" placeholder="Email" id="email" pattern="^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4})*/$"> <br>
                 </div> 
                 <input type="submit" class="btn_reg" name="btn_reg" value="Đăng ký">
             </div>
