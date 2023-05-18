@@ -18,16 +18,21 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding :5px 30px 10px
+    padding :15px 30px 10px
 }
 .header .monthAndYear{
     font-size: 1.45rem;
     font-weight: 800;
+    border:none;
+    width: 220px
+}
+.monthAndYear:focus{
+    outline: none;
 }
 .header .icons button{
-    width: 60px;
-    height: 50px;
-    font-size: xx-large;
+    width: 40px;
+    height: 40px;
+    font-size: medium;
     background-color:  #f2f2f2;
     border-radius: 10px;
     cursor: pointer;
@@ -37,7 +42,7 @@ body{
     font-weight: bold;
     border-style: outset;
 }
-.icons button:hover{
+.icons span:hover{
     background-color: #e8e8e8;
 }
 .calendar ul{
