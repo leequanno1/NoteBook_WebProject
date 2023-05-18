@@ -6,5 +6,5 @@
     if($content && $tendn){
         file_put_contents($file,$content);
     }
-    $conn->close();
+    $conn->close();  
 ?>

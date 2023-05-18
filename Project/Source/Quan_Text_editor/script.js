@@ -147,5 +147,21 @@ CKEDITOR.ClassicEditor.create(document.getElementById("editor"), {
 .catch(error => {console.error(error);});
 
 
+// import{file} from './index.php';
+
+// document.querySelector('#submitBtn').addEventListener('click',function(){
+//     var content = myEditor.getData();
+//     const fs = require('fs');
+
+//     fs.writeFile(file, content, (err) => {
+//     if (err) {
+//         console.error(err);
+//     }
+//     console.log('File written successfully!');
+//     });
+//     alert(file);
+// });
+
+
 
 
