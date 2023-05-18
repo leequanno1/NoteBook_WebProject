@@ -24,7 +24,7 @@
             <form action="./trangChu.php" class="creNote_view" method="post">
                 <h2 class="nameText">Tên note</h2>
                 <input type="text" class = "nameInput" name="tenNote">
-                <button type="sumbit" name="create" class="create"> Tạo </button>
+                <button type="sumbit" name="create" class="create">Tạo</button>
                 <div class="creNote_exit">Exit</div>
             </form>
             <div class="noteList">
