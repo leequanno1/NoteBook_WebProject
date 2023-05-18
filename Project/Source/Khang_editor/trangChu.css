@@ -3,6 +3,52 @@
     margin: 0;
     box-sizing: border-box;
 }
+/* Header */
+header{
+    background-color: #000;
+    height: 60px;
+}
+
+.btnHeader{
+    color:#fff;
+    display:inline-block;
+    padding:21px;
+    margin-left: 35px;
+}
+
+.btnHeader:hover{
+    background-color: gray;
+    cursor: pointer;
+}
+
+.out{
+    position: absolute;
+    right:20px;
+}
+
+/* Header */
+
+#lich_content{
+    display: none;
+}
+
+#tkb_content{
+    display: none;
+}
+
+.updateNote{
+    border: solid #000 2px;
+    width: 80px;
+    position: absolute;
+    z-index: 2;
+    display:none;
+    top:0;
+    left:0;
+}
+
+.changeName{
+    border-bottom: solid grey 1px;
+}
 
 .creNote_view{
     display:none;
@@ -56,11 +102,6 @@
     margin: 10px 0;
 }
 
-header{
-    background-color: #000;
-    height: 60px;
-}
-
 .creNote_but{
     display: inline-block;
     background: lightblue;
@@ -82,12 +123,45 @@ header{
 .noteList{
     margin: 0 150px;
     list-style-type: none;
+    position: relative;
+}
+
+.delete{
+    position: absolute;
+    right:0;
 }
 
 .note_name{
     font-size: 22px;
+    text-decoration: none;
+    color:#000;
+    display: block;
 }
 
 .note_name:hover{
     cursor: pointer;
+}
+
+.areyousure{
+    position: absolute;
+    border: #000 solid 1px;
+    width: 200px;
+    top:200px;
+    right:500px;
+    z-index: 10;
+    display: none;
+}
+
+.areyousure p{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.areyousure div{
+    display: inline-block;
+    width: 60px;
+    margin: 18px;
+    text-align: center;
+    background-color: blue;
+    padding: 17px 0;
 }

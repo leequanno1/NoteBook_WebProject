@@ -7,6 +7,11 @@
     $file = "../NoteFiles/".$noidung;
 ?>
 
+<script>
+    var file = <?php echo $file?>;
+    export{file};
+</script>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
