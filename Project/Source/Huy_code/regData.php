@@ -1,8 +1,9 @@
 <?php
     include '../connetdata.php';
 
-    if(isset($_POST["btn_reg"]) && $_POST["username"] != '' && $_POST["password"] != '' && $_POST["repassword"] != '') {
+    if(isset($_POST["btn_reg"]) && $_POST["username"] != '' && $_POST["email"] != '' && $_POST["password"] != '' && $_POST["repassword"] != '') {
         $username = $_POST['username'];
+        $email = $_POST['email'];
         $password = $_POST['password'];
         $repassword = $_POST['repassword'];
         $coTK = "SELECT * FROM taikhoan WHERE tendn ='$username'";

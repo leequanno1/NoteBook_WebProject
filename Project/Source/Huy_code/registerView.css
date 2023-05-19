@@ -14,7 +14,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
-#login-form {
+#register-form {
     border-radius: 40px;
     background: white;
     width: 500px;
@@ -28,7 +28,7 @@ body {
     box-shadow: 0 2px 25px rgba(0,0,0,.2) */
 }
 
-#login-form .action {
+#register-form .action {
     text-decoration: none;
     color: grey;
     margin-top: 20px;
@@ -37,11 +37,11 @@ body {
     text-transform: uppercase;
 }
 
-#login-form .checkmark {
+#register-form .checkmark {
     font-size: 15px;
 }
 
-#login-form h1 {
+#register-form h1 {
     padding: 35px 35px 0;
     font-weight: 300
 }
@@ -91,7 +91,12 @@ body {
 }
 
 .input-field {
-    padding: 12px 5px
+    padding: 12px 5px;
+    height: 90px;
+}
+
+.btnPass_con{
+    position: relative;
 }
 
 .input-field input {
@@ -130,4 +135,10 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.btn-outline-secondary{
+    position: absolute;
+    right: 10px;
+    top: 25px;
 }
