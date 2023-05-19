@@ -67,9 +67,6 @@ function warning(){
 }
 obj.addEventListener('input',(e)=>{
     if(e.target.value=='') e.target.placeholder="Month Year"
-    for(i=0;i<thisMonth.length;++i){
-        if(thisMonth[i].toLowerCase().startsWith(e.target.value.toLowerCase())) placeholder='hello'
-    }
 })
 obj.addEventListener('change',(e)=>{
     tmp=e.target.value
