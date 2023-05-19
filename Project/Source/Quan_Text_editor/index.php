@@ -5,12 +5,8 @@
     $tendn = $_SESSION['tendn'];
     $noidung =$tendn."_".$tennote.".txt";
     $file = "../NoteFiles/".$noidung;
+    $_SESSION['file'] = $file;
 ?>
-
-<script>
-    var file = <?php echo $file?>;
-    export{file};
-</script>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,11 +24,11 @@
   <div id="editorDiv">
     <form id="container">
       <div id="name_and_button">
-        <input type="text" name="" id="tennote" value="
-        <?php 
+        <input type="text" name="" id="tennote" value="<?php 
             echo $tennote;
-        ?>">
+        ?>"/>
         <button id="submitBtn">Lưu tại đây</button>
+        <input type="text" id="hiden_box" value="<?php echo $_SESSION['file'] ?>"/>
       </div>
       <textarea id="editor" class="editor">
         <?php 
@@ -42,6 +38,5 @@
     </form>
   </div>
   <script src="script.js"></script>
-  <script src="eventLTN.js"></script>
 </body>
 </html>

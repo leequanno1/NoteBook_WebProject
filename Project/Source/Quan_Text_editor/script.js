@@ -146,22 +146,16 @@ CKEDITOR.ClassicEditor.create(document.getElementById("editor"), {
 })
 .catch(error => {console.error(error);});
 
-
-// import{file} from './index.php';
-
-// document.querySelector('#submitBtn').addEventListener('click',function(){
-//     var content = myEditor.getData();
-//     const fs = require('fs');
-
-//     fs.writeFile(file, content, (err) => {
-//     if (err) {
-//         console.error(err);
-//     }
-//     console.log('File written successfully!');
-//     });
-//     alert(file);
-// });
-
-
-
+document.getElementById("submitBtn").addEventListener('click', ()=>{
+    var xhttp = new XMLHttpRequest();
+    let data = myEditor.getData();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            
+        }
+    };
+    xhttp.open("POST", "upload.php", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("data=" + data);
+})
 

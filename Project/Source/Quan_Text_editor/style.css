@@ -22,14 +22,19 @@ body {
   margin: 0 0 5px 0;
 }
 
-#name_and_button input {
+#name_and_button #tennote {
   border: gray 1px solid;
   border-radius: 4px;
   width: 300px;
   min-width: 150px;
   height: 25px;
-  padding: 0 0 0 5px;
+  padding-left: 10px;
+  font-size: medium;
 }
+
+#name_and_button #hiden_box {
+  visibility: hidden;
+} 
 
 #name_and_button button {
   height: 25px;
