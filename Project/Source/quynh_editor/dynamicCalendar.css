@@ -1,18 +1,19 @@
 /* html{
     background-color: violet;
 } đừng bao giờ chỉnh background của html hay window hay body hay mấy cái chung chung*/
-/* body{
-    display: flex;
+/* #lich_content{
+    margin-top: 100px;
+    display: flex; 
     align-items: center;
     justify-content: center;
 } */
 .container{
-    background-color: white;
+    background-color: #edf1f4;
     border-radius: 10px;
-    width: 400px;
+    width: auto;
     height: auto;
-    padding : 10px
-    /* min-height:100vh */
+    padding : 20px;
+    margin: 10px 20px 0px
 }
 .container .header{
     display: flex;
@@ -42,39 +43,46 @@
     font-weight: bold;
     border-style: outset;
 }
-.icons span:hover{
+/* .icons span:hover{
     background-color: #e8e8e8;
+} */
+.calendar{
+    margin-top: 20px
 }
 .calendar ul{
     display: flex;
     list-style: none;
     flex-wrap: wrap;
     text-align: center;
-    margin-left: -35px
+    margin-left: -25px;
 }
 .calendar ul li{
     width: calc(100%/7);
 }
 .calendar .weekDays{
     font-weight: 600;
+    font-size: larger;
 }
 .calendar .dateOfMonth{
     margin-top:-10px;
-    line-height: 30px;
+    line-height: 50px;
     font-weight: 500;
+    margin-top: 10px;
+    font-size: larger;
+    cursor: pointer;
 }
 .calendar .weekDays:hover{
     cursor: context-menu;
 }
-.calendar .dateOfMonth li:hover{
+/* .calendar .dateOfMonth li:hover{
     cursor: pointer;
     background-color: #e8e8e8;
     border-radius: 50%;
-}
+} */
 .inactive{
     color: rgba(217, 50, 50,0.6)
 }
 .today{
-    background-color: rgb(241, 21, 241);
+    background-color: #2196f3;
     border-radius: 50%;
 }
