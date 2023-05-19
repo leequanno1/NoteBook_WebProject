@@ -50,7 +50,7 @@
         <div id="lich_content">
             <div class="container">
             <div class="header">
-                <p class="monthAndYear">September 2022</p>
+                <input type="text" class="monthAndYear" value="hello" style="background-color: #edf1f4;width: 450px;"> 
                 <div class="icons">
                     <button class="prevIcon">&lt;</button>
                     <button class="nextIcon">&gt;</button>
@@ -108,5 +108,6 @@
     </div>
     <script src="../quynh_editor/dynamicCalendar.js"></script>
     <script src="./trangChu.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
