@@ -55,6 +55,10 @@ body {
     padding: 12px 5px
 }
 
+.btnPass_con{
+    position: relative;
+}
+
 .input-field input {
     font-size: 16px;
     display: block;
@@ -84,4 +88,10 @@ body {
 
 .text{
     text-align: center;
+}
+
+.btn-outline-secondary{
+    position: absolute;
+    right: 10px;
+    top: 25px;
 }

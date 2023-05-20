@@ -15,10 +15,10 @@
             <h3 class="title2">Notebook </h3> <br>
             <div class="content">
                 <div class="input-field">
-                    <input type="text" name="username" placeholder="Tài Khoản" id="username"> <br>
+                    <input type="text" name="username" placeholder="Tên đăng nhập" id="username"> <br>
                 </div>
                 <div class="input-field">
-                    <input type="password" name="password" placeholder="Mật Khẩu" id="password"> <br>
+                    <input type="password" name="password" placeholder="Mật khẩu" id="password"> <br>
                 </div>
                 <div class="Bay-acc">
                     <input type="checkbox" checked="checked">

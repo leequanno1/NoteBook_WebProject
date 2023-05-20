@@ -9,9 +9,10 @@
         $user = mysqli_query($conn, $sql); 
         if(mysqli_num_rows($user) > 0) {
             header("location: ../Khang_editor/trangChu_view.php");
-
         } else {
             header("location: loginView.php");
-        }
+        }        
+    }else {
+        header("location: loginView.php");
     }
 ?>

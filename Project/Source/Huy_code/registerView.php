@@ -17,19 +17,19 @@
             <h3 class="title2">Notebook </h3> <br>
             <div class="content">
                 <div class="input-field">
-                    <input type="text" name="username" placeholder="Tài Khoản" id="username"> <br>
+                    <input type="text" name="username" placeholder="Tên đăng nhập" id="username" minlength="8" maxlength="20"> <br>
                 </div>
                 <div class="input-field">
-                    <input type="email" name="email" placeholder="Email" id="email" > <br>
+                    <input type="email" name="email" placeholder="Email" id="email" pattern="/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/"> <br>
                 </div>
                 <div class="btnPass_con input-field">
-                    <input type="password" name="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="Phải có ít nhất 6 ký tự và tối thiểu 1 chữ thường" placeholder="Mật Khẩu" id="pass1">
+                    <input type="password" name="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="Phải có ít nhất 6 ký tự và tối thiểu 1 chữ hoa" placeholder="Mật khẩu" id="pass1">
                     <button class="btn-outline-secondary" type="button" id="btnPass">
                         <span class="fas fa-eye"></span>
                     </button>
                 </div>
                 <div class="btnPass_con input-field">
-                    <input type="password" name="repassword" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="Phải có ít nhất 6 ký tự và tối thiểu 1 chữ thường" placeholder="Nhập Lại Mật Khẩu" id="pass2">
+                    <input type="password" name="repassword" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="Phải có ít nhất 6 ký tự và tối thiểu 1 chữ hoa" placeholder="Nhập lại mật khẩu" id="pass2">
                     <button class="btn-outline-secondary" type="button" id="btnRePass">
                         <span class="fas fa-eye"></span>
                     </button>
