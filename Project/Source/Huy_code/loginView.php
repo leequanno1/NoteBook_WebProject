@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="loginView.css">
     <title>Login</title>
 </head>
-
-<body aria-hidden="false" style="padding: 0px;">
+<body aria-hidden="false" style="padding: 0px">
     <div id="login-form">
         <form action="./logData.php" method="POST">
             <h1 class="title1">Đăng nhập </h1> 
@@ -27,10 +26,11 @@
                 <a href="./forgotPassView.php" class="link">Quên mật khẩu?</a> <br>  
                 <div class="action">
                     <a href="./registerView.php">Đăng ký</a>
-                    <button type="submit" class="btn_log" name="btn_log"> Đăng nhập</button>
+                    <button type="submit" class="btn_log" name="btn_log" disabled> Đăng nhập</button>
                 </div>
             </div>        
         </form>
     </div>
+    <script src="./login.js"></script>
 </body>
 </html>

@@ -36,10 +36,6 @@ body {
     text-transform: uppercase;
 }
 
-#register-form .checkmark {
-    font-size: 15px;
-}
-
 #register-form h1 {
     padding: 35px 35px 0;
     font-weight: 300

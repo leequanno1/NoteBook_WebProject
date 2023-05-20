@@ -27,7 +27,7 @@
                     <button class="btn-outline-secondary" type="button" id="btnPass">
                         <span class="fas fa-eye"></span>
                     </button>
-                    <p class="pass_ero">Vui lòng nhập từ 6 đến 20 kí tự</p>
+                    <p class="pass_ero">Vui lòng nhập từ 8 đến 20 kí tự</p>
                 </div>
                 <div class="btnPass_con input-field">
                     <input type="password" name="repassword" placeholder="Nhập lại mật khẩu" id="pass2">

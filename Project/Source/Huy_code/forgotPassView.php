@@ -19,42 +19,23 @@
                     <input type="text" name="username" placeholder="Tên đăng nhập" id="username"> <br>
                 </div>
                 <div class="btnPass_con input-field">
-                    <input type="password" name="newpassword" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="Phải có ít nhất 6 ký tự và tối thiểu 1 chữ thường" placeholder="Mật khẩu" id="pass1">
+                    <input type="password" name="newpassword" placeholder="Mật khẩu" id="pass1">
                     <button class="btn-outline-secondary" type="button" id="btnPass">
                         <span class="fas fa-eye"></span>
                     </button>
+                    <p class="pass_ero">Vui lòng nhập từ 8 đến 20 kí tự</p>
                 </div>
                 <div class="btnPass_con input-field">
-                    <input type="password" name="renewpassword" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="Phải có ít nhất 6 ký tự và tối thiểu 1 chữ thường" placeholder="Nhập lại mật khẩu" id="pass2">
+                    <input type="password" name="renewpassword" placeholder="Nhập lại mật khẩu" id="pass2">
                     <button class="btn-outline-secondary" type="button" id="btnRePass">
                         <span class="fas fa-eye"></span>
                     </button>
+                    <p class="repass_ero">Mật khẩu không trùng</p>
                 </div> <br>
-                <input type="submit" class="btn_for" name="btn_for" value="TIếp theo">
+                <input type="submit" class="btn_for" name="btn_for" value="TIếp theo" disabled>
             </div>
         </form>
     </div>
-    <script>
-        const pass1Element =document.querySelector('#pass1');
-        const btnPElement =document.querySelector('#btnPass');
-        const pass2Element =document.querySelector('#pass2');
-        const btnRpElement =document.querySelector('#btnRePass');
-
-        btnPElement.addEventListener('click', function() {
-            const currentType = pass1Element.getAttribute('type');
-            pass1Element.setAttribute(
-                'type',
-                currentType === 'password' ? 'text' : 'password'
-            )
-        })
-
-        btnRpElement.addEventListener('click', function() {
-            const currentType = pass2Element.getAttribute('type');
-            pass2Element.setAttribute(
-                'type',
-                currentType === 'password' ? 'text' : 'password'
-            )
-        })
-    </script>
+    <script src="./forgot.js"></script>
 </body>
 </html>
