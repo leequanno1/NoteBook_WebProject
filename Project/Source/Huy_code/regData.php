@@ -1,6 +1,5 @@
 <?php
     include '../connetdata.php';
-
     if(isset($_POST["btn_reg"]) && $_POST["username"] != '' && $_POST["email"] != '' && $_POST["password"] != '' && $_POST["repassword"] != '') {
         $username = $_POST['username'];
         $email = $_POST['email'];

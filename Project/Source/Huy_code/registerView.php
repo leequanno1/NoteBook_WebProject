@@ -8,58 +8,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
     <title>Register</title>
 </head>
-<body aria-hidden="false" style="padding: 0px;">
- 
+<body>
     <div id="register-form">
-
         <form class="createAccount" action="regData.php" method="post"> 
-            <h1 class="title1">Đăng ký </h1> 
-            <h3 class="title2">Notebook </h3> <br>
+            <h1 class="title1">Đăng ký</h1> 
+            <h3 class="title2">Notebook</h3><br>
             <div class="content">
                 <div class="input-field">
-                    <input type="text" name="username" placeholder="Tên đăng nhập" id="username" minlength="8" maxlength="20"> <br>
+                    <input type="text" name="username" placeholder="Tên đăng nhập" id="username"><br>
+                    <p class="tendn_ero">Vui lòng nhập từ 8 đến 20 kí tự</p>
                 </div>
                 <div class="input-field">
-                    <input type="email" name="email" placeholder="Email" id="email" pattern="/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/"> <br>
+                    <input type="email" name="email" placeholder="Email" id="email"> <br>
+                    <p class="email_ero">Không được để trống</p>
                 </div>
                 <div class="btnPass_con input-field">
-                    <input type="password" name="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="Phải có ít nhất 6 ký tự và tối thiểu 1 chữ hoa" placeholder="Mật khẩu" id="pass1">
+                    <input type="password" name="password" placeholder="Mật khẩu" id="pass1">
                     <button class="btn-outline-secondary" type="button" id="btnPass">
                         <span class="fas fa-eye"></span>
                     </button>
+                    <p class="pass_ero">Vui lòng nhập từ 6 đến 20 kí tự</p>
                 </div>
                 <div class="btnPass_con input-field">
-                    <input type="password" name="repassword" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="Phải có ít nhất 6 ký tự và tối thiểu 1 chữ hoa" placeholder="Nhập lại mật khẩu" id="pass2">
+                    <input type="password" name="repassword" placeholder="Nhập lại mật khẩu" id="pass2">
                     <button class="btn-outline-secondary" type="button" id="btnRePass">
                         <span class="fas fa-eye"></span>
                     </button>
+                    <p class="repass_ero">Mật khẩu không trùng</p>
                 </div>
-                <a href="./loginView.php" class="link"> Đã có tài khoản </a> <br>
-                <input type="submit" class="btn_reg" name="btn_reg" value="Đăng ký">
+                <a href="./loginView.php" class="link">Đã có tài khoản</a> <br>
+                <input type="submit" class="btn_reg" name="btn_reg" value="Đăng ký" disabled>
             </div>
         </form>
     </div>
-    <script>
-        const pass1Element =document.querySelector('#pass1');
-        const btnPElement =document.querySelector('#btnPass');
-        const pass2Element =document.querySelector('#pass2');
-        const btnRpElement =document.querySelector('#btnRePass');
-
-        btnPElement.addEventListener('click', function() {
-            const currentType = pass1Element.getAttribute('type');
-            pass1Element.setAttribute(
-                'type',
-                currentType === 'password' ? 'text' : 'password'
-            )
-        })
-
-        btnRpElement.addEventListener('click', function() {
-            const currentType = pass2Element.getAttribute('type');
-            pass2Element.setAttribute(
-                'type',
-                currentType === 'password' ? 'text' : 'password'
-            )
-        })
-    </script>
+    <script src="./register.js"></script>
 </body>
 </html>

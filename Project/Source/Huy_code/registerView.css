@@ -23,9 +23,8 @@ body {
 #register-form a.link {
     text-decoration: none;
     color: grey;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    display: inline-block;
+    display: block;
+    text-align: center;
 }
 
 #register-form .action {
@@ -73,7 +72,6 @@ body {
 
 .content {
     padding: 35px;
-    text-align: center
 }
 
 .input-field {
@@ -118,4 +116,10 @@ body {
     position: absolute;
     right: 10px;
     top: 25px;
+}
+
+.input-field p{
+    font-size: 13px;
+    color:red;
+    display: none;
 }
