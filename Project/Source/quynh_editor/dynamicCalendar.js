@@ -65,29 +65,40 @@ var obj=document.querySelector('.monthAndYear')
 function warning(){
     swal('Cảnh báo:','Thời gian không chính xác, vui lòng nhập lại!')
 }
+obj.addEventListener('input',(e)=>{
+    if(e.target.value=='') e.target.placeholder="Month Year"
+})
 obj.addEventListener('change',(e)=>{
     tmp=e.target.value
     mNy=tmp.split(" ")
-    let m=mNy[0],y=mNy[1]
-    tmp=""
-    for(i=0;i<m.length;++i){
-        if(i==0) tmp+=m[i].toUpperCase()
-        else tmp+=m[i].toLowerCase()
+    var m=mNy[0],y=mNy[1]
+    if(isNaN(parseInt(m))){
+        let tmp=""
+        for(i=0;i<m.length;++i){
+            if(i==0) tmp+=m[i].toUpperCase()
+            else tmp+=m[i].toLowerCase()
+        }
+        m=tmp;
+    }else{
+        m=""+parseInt(m);
     }
-    m=tmp;
-    var check=false
+    var index
+    var checkM=false
+    var checkY=false
     // //neu onchange dung thi doi, con ko thi alert va tro lai nhu cu
     for(i=0;i<thisMonth.length;++i){
-        if(m==thisMonth[i]){
-            month=i;
-            check=true;
+        if(m==thisMonth[i]  || parseInt(m)-1==i || ( (m.length>=3)&&(thisMonth[i].toLowerCase().startsWith(m.toLowerCase()))  )){
+            index=i;
+            checkM=true;
             break;
         }
     }
-    if(y>=1900 && y<=2050){
-        year=y;
-    } else check=false;
-    if(check){
+    if(y>=1 && y<=3000){
+        checkY=true;
+    }
+    if(checkM&&checkY){
+        month=index;
+        year=parseInt(y);
         monthAndYear.value=thisMonth[month]+' '+year
         renderCalendar()
     }else{
@@ -104,4 +115,3 @@ for(i=0;i<x.length;++i){
         console.log(e.target.innerText)
     })
 }
-
