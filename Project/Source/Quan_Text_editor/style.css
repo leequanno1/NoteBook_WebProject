@@ -19,29 +19,45 @@ body {
 }
 
 #name_and_button {
+  display: grid;
+  grid-template-columns: 40% 20% 20%;
+  grid-column-gap: 10px;
+  height: 25px;
   margin: 0 0 5px 0;
 }
 
 #name_and_button #tennote {
   border: gray 1px solid;
   border-radius: 4px;
-  width: 300px;
+  /* width: 300px; */
   min-width: 150px;
   height: 25px;
   padding-left: 10px;
   font-size: medium;
 }
 
-#name_and_button #hiden_box {
+/* #name_and_button #hiden_box {
   visibility: hidden;
-} 
+}  */
 
 #name_and_button button {
-  height: 25px;
-  width: 150px;
+  /* height: 25px; */
+  /* width: 150px; */
   background: aliceblue;
   border: gray 1px solid;
   border-radius: 2px;
+}
+
+#name_and_button #exitBtn {
+  /* height: 25px; */
+  /* width: 150px; */
+  background: aliceblue;
+  border: gray 1px solid;
+  border-radius: 2px;
+  text-decoration: none;
+  padding: auto;
+  color: black;
+  text-align: center;
 }
 
 .ck-editor__editable_inline {

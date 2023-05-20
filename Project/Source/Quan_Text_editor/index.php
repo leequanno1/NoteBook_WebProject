@@ -28,7 +28,11 @@
             echo $tennote;
         ?>"/>
         <button id="submitBtn">Lưu tại đây</button>
-        <input type="text" id="hiden_box" value="<?php echo $_SESSION['file'] ?>"/>
+        <a href="../Khang_editor/trangChu_view.php?" id="exitBtn">
+        <p style="
+              margin-top: 2px;
+          ">Thoát về trang chủ</p>
+        </a>
       </div>
       <textarea id="editor" class="editor">
         <?php 

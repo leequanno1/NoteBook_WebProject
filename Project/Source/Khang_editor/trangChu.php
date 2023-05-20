@@ -13,10 +13,10 @@
         $note = fopen($file, "w");
         fwrite($note,$default);
         fclose($note);
-        header("location: ../Quan_Text_editor/index.php");
+        header("location: ../Quan_Text_editor/index.php?");
     }
     else{
         $_SESSION['tennote'] = $_GET['tennote'];
-        header("location: ../Quan_Text_editor/index.php");
+        header("location: ../Quan_Text_editor/index.php?");
     }
 ?>

@@ -26,26 +26,33 @@
 
             <div id="create_schedule_popup">
                 <form action="">
-                    <label for="input" style="grid-row: 1;" >ngày</label>
-                    <input id="txt_get_date" type="text"/>
-                    <label for="input" style="grid-row: 2;">giờ bắt đầu</label>
+                    <label for="input">Tên công việc:</label>
+                    <input type="text">
+                    <label for="input">Ngày:</label>
+                    <select name="txt_get_date" id="txt_get_date"></select>
+                    <label for="input" >Giờ bắt đầu:</label>
                     <div style="display: grid; 
                                 grid-template-columns: 25% 25% 25% 25%;">
-                        <input id="txt_get_start_h" type="text"/>
+                        <select name="opt_start_hours" id="txt_get_start_h" class="hours"></select>
                         <label for="input " style="padding-left:5px ;">giờ</label>
-                        <input id="txt_get_start_m" type="text"/>
+                        <select name="opt_start_mins" id="txt_get_start_m" class="mins"></select>
                         <label for="input " style="padding-left:5px ;">phút</label>
                     </div>
-                    <label for="input" style="grid-row: 3;">giờ kết thúc</label>
+                    <label for="input" >Giờ kết thúc:</label>
                     <div style="display: grid; 
                                 grid-template-columns: 25% 25% 25% 25%;">
-                        <input id="txt_get_end_h" type="text"/>
+                        <select name="opt_end_hours" id="txt_get_end_h" class="hours"></select>
                         <label for="input " style="padding-left:5px ;">giờ</label>
-                        <input id="txt_get_end_m" type="text"/>
-                        <label for="input " style="padding-left:5px ;">phút</label>
+                        <select name="opt_end_mins" id="txt_get_end_m" class="mins"></select>
+                        <label for="input " style="padding-left:5px ;" >phút</label>
                     </div>
-                    <label for="input" style="grid-row: 4;">nội dung</label>
-                    <input id="txt_get_content" type="text"/>
+                    <label for="select" >Màu sắc:</label>
+                    <div id="div_color_change">
+                        <select name="" id="sel_task_color"></select>
+                        <div id="div_show_color"></div>
+                    </div>
+                    <label for="input" >Nội dung:</label>
+                    <textarea name="" id="txt_get_content" cols="30" rows="3"></textarea>
                 </form>
                 <button id="bnt_submit">Tạo</button>
                 <button id="bnt_cancel">Hủy</button>
