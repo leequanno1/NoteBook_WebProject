@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 10, 2023 lúc 02:33 AM
+-- Thời gian đã tạo: Th5 20, 2023 lúc 04:13 AM
 -- Phiên bản máy phục vụ: 10.4.27-MariaDB
 -- Phiên bản PHP: 8.2.0
 
@@ -29,16 +29,17 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `taikhoan` (
   `tendn` varchar(20) NOT NULL,
-  `matkhau` varchar(20) NOT NULL
+  `matkhau` varchar(20) NOT NULL,
+  `email` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `taikhoan`
 --
 
-INSERT INTO `taikhoan` (`tendn`, `matkhau`) VALUES
-('user1', '1234'),
-('user2', '1234');
+INSERT INTO `taikhoan` (`tendn`, `matkhau`, `email`) VALUES
+('user1', '1234', ''),
+('user2', '1234', '');
 
 --
 -- Chỉ mục cho các bảng đã đổ
