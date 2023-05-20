@@ -13,14 +13,14 @@ body {
     transform: translate(-50%, -50%);
 }
 
-#register-form {
+#change-form {
     border-radius: 40px;
     background: white;
     width: 500px;
     margin: 65px auto;
 }
 
-#register-form a.link {
+#change-form a.link {
     text-decoration: none;
     color: grey;
     margin-top: 20px;
@@ -28,7 +28,7 @@ body {
     display: inline-block;
 }
 
-#register-form .action {
+#change-form .action {
     text-decoration: none;
     color: grey;
     margin-top: 20px;
@@ -37,16 +37,16 @@ body {
     text-transform: uppercase;
 }
 
-#register-form .checkmark {
+#change-form .checkmark {
     font-size: 15px;
 }
 
-#register-form h1 {
+#change-form h1 {
     padding: 35px 35px 0;
     font-weight: 300
 }
 
-.btn_reg{
+.btn_change{
     font-size: 16px;
     width: 100%;
     border: none;
@@ -61,7 +61,7 @@ body {
     color: #485460;
 }
 
-.btn_reg:hover{
+.btn_change:hover{
     cursor: pointer;
     opacity: 0.6;
 }
@@ -112,13 +112,6 @@ body {
 
 .text{
     text-align: center;
-}
-
-#login {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .btn-outline-secondary{

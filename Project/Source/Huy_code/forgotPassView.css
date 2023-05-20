@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /*-webkit-font-smoothing: antialiased*/
 }
 
 body {
@@ -13,40 +14,19 @@ body {
     transform: translate(-50%, -50%);
 }
 
-#register-form {
+#forgot-form {
     border-radius: 40px;
     background: white;
     width: 500px;
     margin: 65px auto;
 }
 
-#register-form a.link {
-    text-decoration: none;
-    color: grey;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    display: inline-block;
-}
-
-#register-form .action {
-    text-decoration: none;
-    color: grey;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    display: inline-block;
-    text-transform: uppercase;
-}
-
-#register-form .checkmark {
-    font-size: 15px;
-}
-
-#register-form h1 {
+#forgot-form h1 {
     padding: 35px 35px 0;
     font-weight: 300
 }
 
-.btn_reg{
+.btn_for{
     font-size: 16px;
     width: 100%;
     border: none;
@@ -61,12 +41,7 @@ body {
     color: #485460;
 }
 
-.btn_reg:hover{
-    cursor: pointer;
-    opacity: 0.6;
-}
-
-.action a:hover {
+.btn_for:hover{
     cursor: pointer;
     opacity: 0.6;
 }
@@ -77,12 +52,7 @@ body {
 }
 
 .input-field {
-    padding: 12px 5px;
-    height: 90px;
-}
-
-.btnPass_con{
-    position: relative;
+    padding: 12px 5px
 }
 
 .input-field input {
@@ -94,6 +64,8 @@ body {
     border: 0;
     border-bottom: 1px solid #747474;
     outline: none;
+    /*-webkit-transition: all .2s;
+    transition: all .2s */
 }
 
 .title1{
@@ -112,17 +84,4 @@ body {
 
 .text{
     text-align: center;
-}
-
-#login {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.btn-outline-secondary{
-    position: absolute;
-    right: 10px;
-    top: 25px;
 }

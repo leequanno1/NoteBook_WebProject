@@ -24,7 +24,7 @@
                     <input type="checkbox" checked="checked">
                     <span class="checkmark"> Nhớ mật khẩu</span> <br>
                 </div>
-                <a href="#" class="link">Quên mật khẩu?</a> <br>  
+                <a href="./forgotPassView.php" class="link">Quên mật khẩu?</a> <br>  
                 <div class="action">
                     <a href="./registerView.php">Đăng ký</a>
                     <button type="submit" class="btn_log" name="btn_log"> Đăng nhập</button>
