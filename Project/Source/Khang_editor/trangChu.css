@@ -5,6 +5,10 @@
 }
 /* Header */
 header{
+    z-index: 3;
+    top: 0;
+    position: fixed;
+    width: 100%;
     background-color: #000;
     height: 60px;
 }
@@ -44,6 +48,14 @@ header{
     display:none;
     top:0;
     left:0;
+}
+
+#note_content{
+    margin-top: 60px;
+}
+
+#lich_content{
+    margin-top: 60px;
 }
 
 .changeName{
