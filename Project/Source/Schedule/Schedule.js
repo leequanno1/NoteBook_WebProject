@@ -1,14 +1,19 @@
 // declare
+let day_name_head = document.getElementById("day_name_head");
 let time_name_container = document.getElementById("time_name_container");
 let day_content = document.querySelectorAll(".day_content");
 let bnt_create_schedule = document.getElementById("bnt_create_schedule");
 let create_schedule_popup = document.getElementById("create_schedule_popup");
 let hours = document.querySelectorAll(".hours");
 let mins = document.querySelectorAll(".mins");
-let txt_get_date = document.getElementById("txt_get_date");
-let sel_task_color = document.getElementById("sel_task_color");
-let div_show_color = document.getElementById("div_show_color");
+let txt_get_date = document.getElementById("ngay");
+let sel_task_color = document.getElementById("mau");
+let div_show_color = document.getElementById("div_mau");
+let bnt_cancel = document.getElementById("bnt_cancel");
+let tasks = document.querySelectorAll(".task");
+let pop_cancel = document.querySelectorAll(".pop_cancel");
 
+const currentDate = new Date();
 // function
 function removeBoxFromDay(day_string,star,end){
     star = parseInt(star);
@@ -19,6 +24,42 @@ function removeBoxFromDay(day_string,star,end){
         }else{
             document.getElementById(day_string+"_"+i).remove();
         }
+    }
+}
+
+function haveExistTask(currunt_task_id){
+    var date = returnDayFromId(currunt_task_id);
+    var star = returnStartTime(currunt_task_id);
+    var end = returnEndTime(currunt_task_id);
+    var date_box = document.getElementById(date+'_content');
+    var task = date_box.querySelectorAll('.task');
+    var check = 0;
+    task.forEach(element => {
+        var e_start = returnStartTime(element.id);
+        var e_end = returnEndTime(element.id);
+        if((e_start < star && star < e_end)||(e_start < end && star < e_end)){
+            check++;
+        }
+    });
+    return check > 0? true : false;
+}
+
+function returnDayNumber(number){
+    switch(number){
+        case 'su':
+            return 1;
+        case 'mo':
+            return 2;
+        case 'tu':
+            return 3;
+        case 'we':
+            return 4;
+        case 'th':
+            return 5;
+        case 'fr':
+            return 6;
+        case 'sa':
+            return 7;
     }
 }
 
@@ -79,66 +120,78 @@ function returnColor(number){
     }
 }
 
+function minuteToString(min){
+    min = parseInt(min);
+    if (min/10 >= 1){
+        return min.toString();
+    }
+    return '0' + min.toString();
+}
+
 function convertMinute(min){
     min = parseInt(min);
     return Math.round(min/15);
 }
 
-// script
-for(let i = 0; i < 24; i++){
-    let time = document.createElement("label");
-    time.innerHTML = i;
-    time.style.setProperty("grid-row-start",i*4+1);
-    time.style.setProperty("grid-row-end",i*4+5);
-    time.style.setProperty("text-align","right");
-    time.style.setProperty("padding-right","25px");
-    time.style.setProperty("margin-left","70%");
-    time.style.setProperty("border-top","1px solid");
-    time.style.setProperty("border-bottom","1px solid");
-    time.style.setProperty("background","white");
-    time_name_container.appendChild(time);
+function returnDayFromId(id){
+    return id.substring(0, 2);
 }
 
-for(let i = 1; i < 8; i++){
-    for(let j = 0; j < 24; j++){
-        var hour_box = document.createElement("div");
-        hour_box.setAttribute("id", returnDayString(i)+"_"+j);
-        hour_box.style.setProperty("grid-row-start",j*4+1);
-        hour_box.style.setProperty("grid-row-end",j*4+5);
-        hour_box.style.setProperty("border-top","1px solid");
-        hour_box.style.setProperty("border-bottom","1px solid");
-        hour_box.style.setProperty("background","white");
-        day_content[i].appendChild(hour_box);
-    }
+function returnStartTime(id){
+    let firstIndex = id.indexOf("_");
+    let secondIndex = id.indexOf("_", firstIndex + 1);
+    let result = id.substring(firstIndex + 1, secondIndex);
+    return parseFloat(result);
+}
+
+function returnEndTime(id){
+    let firstIndex = id.indexOf("_");
+    let secondIndex = id.indexOf("_", firstIndex + 1);
+    let result = id.substring(secondIndex + 1);
+    return parseFloat(result);
+}
+
+function returnTimeFloat(time){
+
+}
+// script
+currentDateBox = document.getElementById(returnDayString(currentDate.getDay()+1));
+currentDateBox.style.setProperty("background", "rgb(128 244 96)");
+
+bnt_cancel.addEventListener("click",() => {
+    create_schedule_popup.style.visibility = "hidden";
+    console.log("hiden");
+})
+
+for(var i = 0; i < tasks.length; i++){
+    tasks[i].addEventListener("click", e =>{
+        let popup = document.getElementById(e.target.id+"_pop");
+        
+        popup.style.top = e.pageY + 'px';
+        if(returnDayNumber(returnDayFromId(popup.id)) > 4){
+            popup.style.left = (e.pageX - 300) + 'px';
+        }else{
+            popup.style.left = e.pageX + 'px';
+        }
+
+        popup.style.visibility = "visible";
+        console.log(1)
+    });
+}
+
+for(let i = 0; i < pop_cancel.length; i++){
+    pop_cancel[i].addEventListener("click", e => {
+        var pop_id = e.target.id.slice(0, -4)+"_pop";
+        var popup = document.getElementById(pop_id);
+        popup.style.top = "0px";
+        popup.style.left = "0px";
+        popup.style.visibility = "hidden";
+        console.log("hidden ok");
+    })
 }
 
 bnt_create_schedule.addEventListener('click', ()=>{
     create_schedule_popup.style.setProperty('visibility','visible');
-});
-
-document.getElementById("bnt_cancel").addEventListener("click", ()=> {
-    create_schedule_popup.style.setProperty('visibility','hidden');
-});
-
-document.getElementById("bnt_submit").addEventListener("click", ()=> {
-    create_schedule_popup.style.setProperty('visibility','hidden');
-    let txt_get_date_value = document.getElementById('txt_get_date').value;
-    let txt_get_start_h_value = document.getElementById('txt_get_start_h').value;
-    let txt_get_start_m_value = document.getElementById('txt_get_start_m').value;
-    let txt_get_end_h_value = document.getElementById('txt_get_end_h').value;
-    let txt_get_end_m_value = document.getElementById('txt_get_end_m').value;
-    let txt_get_content_value = document.getElementById('txt_get_content').value;
-    var task_box =  document.createElement("div");
-    task_box.style.setProperty('grid-row-start',(parseInt(txt_get_start_h_value)*4+convertMinute(txt_get_start_m_value)+1).toString());
-    task_box.style.setProperty('grid-row-end',(parseInt(txt_get_end_h_value)*4+convertMinute(txt_get_end_m_value)+1).toString());
-    task_box.style.setProperty('background',sel_task_color.value);
-
-    task_box.id = txt_get_date_value+'_'+txt_get_start_h_value+'.'+txt_get_start_m_value+'_'+txt_get_end_h_value+'.'+txt_get_end_m_value;
-    task_box.className = "task";
-    task_box.innerHTML = txt_get_content_value;
-    var day_box = document.getElementById(txt_get_date_value+'_content');
-    day_box.appendChild(task_box);
-    removeBoxFromDay(txt_get_date_value,txt_get_start_h_value,txt_get_end_h_value);
 });
 
 // popup
@@ -146,13 +199,13 @@ for(var i = 0; i < 2; i++){
     for(var j = 0; j < 24; j++){
         var hour_opt = document.createElement("option");
         hour_opt.value = j;
-        hour_opt.text = j;
+        hour_opt.text = j+" giờ";
         hours[i].appendChild(hour_opt);
     }
     for(var k = 0; k < 60; k++){
         var min_opt = document.createElement("option");
         min_opt.value = k;
-        min_opt.text = k;
+        min_opt.text = k+" phút";
         mins[i].appendChild(min_opt);
     }
 }
