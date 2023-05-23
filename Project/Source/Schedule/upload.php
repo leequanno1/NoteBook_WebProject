@@ -36,6 +36,6 @@
             }
         }
         mysqli_query($conn,$sql);
-        header("location: ./Schedule.php?");
+        header("location: ../Khang_editor/trangChu_view.php?");
     }
 ?>
