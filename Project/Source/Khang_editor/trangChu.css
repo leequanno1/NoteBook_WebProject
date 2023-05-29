@@ -1,10 +1,11 @@
-*{
-    padding:0;
+* {
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
 /* Header */
-header{
+header {
     z-index: 3;
     top: 0;
     position: fixed;
@@ -13,57 +14,61 @@ header{
     height: 60px;
 }
 
-.btnHeader{
-    color:#fff;
-    display:inline-block;
-    padding:21px;
+.btnHeader {
+    color: #fff;
+    display: inline-block;
+    padding: 21px;
     margin-left: 35px;
 }
 
-.btnHeader:hover{
+.btnHeader:hover {
     background-color: gray;
     cursor: pointer;
 }
 
-.out{
+.out {
     position: absolute;
-    right:20px;
+    right: 20px;
 }
 
 /* Header */
 
-#lich_content{
+#note_content {
     display: none;
 }
 
-#tkb_content{
+#lich_content {
     display: none;
 }
 
-.updateNote{
+#tkb_content {
+    display: block;
+}
+
+.updateNote {
     border: solid #000 2px;
     width: 80px;
     position: absolute;
     z-index: 2;
-    display:none;
-    top:0;
-    left:0;
+    display: none;
+    top: 0;
+    left: 0;
 }
 
-#note_content{
+#note_content {
     margin-top: 60px;
 }
 
-#lich_content{
+#lich_content {
     margin-top: 60px;
 }
 
-.changeName{
+.changeName {
     border-bottom: solid grey 1px;
 }
 
-.creNote_view{
-    display:none;
+.creNote_view {
+    display: none;
     border: solid;
     width: 180px;
     height: 210px;
@@ -73,7 +78,7 @@ header{
     right: 380px;
 }
 
-.create{
+.create {
     font-size: 16px;
     border: none;
     position: absolute;
@@ -84,12 +89,12 @@ header{
     background-color: blue;
 }
 
-.create:hover{
+.create:hover {
     cursor: pointer;
     opacity: 0.6;
 }
 
-.creNote_exit{
+.creNote_exit {
     border: none;
     position: absolute;
     bottom: 15px;
@@ -99,77 +104,77 @@ header{
     background-color: blue;
 }
 
-.creNote_exit:hover{
+.creNote_exit:hover {
     cursor: pointer;
     opacity: 0.6;
 }
 
-.nameInput{
+.nameInput {
     width: 132px;
     margin: 15px 20px;
 }
 
-.nameText{
+.nameText {
     text-align: center;
     margin: 10px 0;
 }
 
-.creNote_but{
+.creNote_but {
     display: inline-block;
     background: lightblue;
     border-radius: 50%;
     margin-left: 20px;
-    margin-top:10px;
+    margin-top: 10px;
 }
 
-.icon{
+.icon {
     font-size: 33px;
     padding: 8px 17px;
 }
 
-.icon:hover{
+.icon:hover {
     cursor: pointer;
     opacity: 0.6;
 }
 
-.noteList{
+.noteList {
     margin: 0 150px;
     list-style-type: none;
     position: relative;
 }
 
-.delete{
+.delete {
     position: absolute;
-    right:0;
+    right: 0;
 }
 
-.note_name{
+.note_name {
     font-size: 22px;
     text-decoration: none;
-    color:#000;
+    color: #000;
     display: inline-block;
 }
 
-.note_name:hover{
+.note_name:hover {
     cursor: pointer;
 }
 
-.areyousure{
+.areyousure {
     position: absolute;
     border: #000 solid 1px;
     width: 200px;
-    top:200px;
-    right:500px;
+    top: 200px;
+    right: 500px;
     z-index: 10;
     display: none;
 }
 
-.areyousure p{
+.areyousure p {
     margin-top: 10px;
     text-align: center;
 }
 
-.areyousure div{
+.areyousure div {
     display: inline-block;
     width: 60px;
     margin: 18px;

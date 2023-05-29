@@ -14,16 +14,16 @@ var no = document.getElementsByClassName("no");
 var delete_key;
 
 
-yes[0].addEventListener("click", ()=>{
+yes[0].addEventListener("click", () => {
     window.location.href = "./delete.php?tennote=" + delete_key;
 })
 
-no[0].addEventListener("click",()=>{
+no[0].addEventListener("click", () => {
     areyousure.style.display = "none";
 })
 
-for(i=0;i<note_name.length;i++){
-    note_name[i].addEventListener("contextmenu", function(e){
+for (i = 0; i < note_name.length; i++) {
+    note_name[i].addEventListener("contextmenu", function (e) {
         e.preventDefault();
         updateNote[0].style.display = 'inline-block';
         updateNote[0].style.left = e.clientX;
@@ -31,40 +31,40 @@ for(i=0;i<note_name.length;i++){
     })
 }
 
-for(i=0;i<delete_note.length;i++){
-    delete_note[i].addEventListener("click",e=>{
+for (i = 0; i < delete_note.length; i++) {
+    delete_note[i].addEventListener("click", e => {
         delete_key = e.target.accessKey;
         areyousure[0].style.display = "block";
     })
 }
 
-creNote_but[0].addEventListener("click",()=>{
+creNote_but[0].addEventListener("click", () => {
     creNote_view[0].style.display = "block";
 });
 
-exit[0].addEventListener("click",()=>{
+exit[0].addEventListener("click", () => {
     creNote_view[0].style.display = "none";
 });
 
-btnHeader[0].addEventListener("click", ()=>{
+btnHeader[0].addEventListener("click", () => {
     note_content.style.display = "block";
     lich_content.style.display = "none";
     tkb_content.style.display = "none";
-    
+
 })
 
-btnHeader[1].addEventListener("click", ()=>{
+btnHeader[1].addEventListener("click", () => {
     note_content.style.display = "none";
     lich_content.style.display = "block";
     tkb_content.style.display = "none";
 })
 
-btnHeader[2].addEventListener("click", ()=>{
+btnHeader[2].addEventListener("click", () => {
     note_content.style.display = "none";
     lich_content.style.display = "none";
     tkb_content.style.display = "block";
 })
 
-btnHeader[3].addEventListener("click", ()=>{
+btnHeader[3].addEventListener("click", () => {
     window.location.href = "../Huy_code/loginView.php"
 })
