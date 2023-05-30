@@ -20,7 +20,7 @@
                 </div>
                 <div class="input-field">
                     <input type="email" name="email" placeholder="Email" id="email"> <br>
-                    <p class="email_ero">Không được để trống</p>
+                    <p class="email_ero">Email không hợp lệ</p>
                 </div>
                 <div class="btnPass_con input-field">
                     <input type="password" name="password" placeholder="Mật khẩu" id="pass1">
